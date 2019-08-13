@@ -1,0 +1,39 @@
+{
+  "name": "preact_and_react_on_storybook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tomotetra",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "storybook": "start-storybook"
+  },
+  "dependencies": {
+    "preact": "^8.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@storybook/preact": "^5.1.10",
+    "@storybook/react": "^5.1.10",
+    "@types/react": "^16.2.0",
+    "@types/react-dom": "^16.2.0",
+    "@types/storybook__preact": "^5.2.0",
+    "@types/storybook__react": "^4.0.2",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3",
+    "storybook": "^1.0.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
