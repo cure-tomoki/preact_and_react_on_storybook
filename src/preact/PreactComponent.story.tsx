@@ -2,10 +2,12 @@ import * as React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { PreactComponent } from './PreactComponent';
-import Wrapper from '../util/wrapper';
+import PreactWrapper from '../utils/preactWrapper';
 
 const type = 'Preact';
 
+const Wrapped = PreactWrapper(PreactComponent);
+
 storiesOf(type, module).add(`${type}Component`,() => (
-  <Wrapper Component={new PreactComponent({type})}/>
+  <Wrapped type={type}/>
 ));
