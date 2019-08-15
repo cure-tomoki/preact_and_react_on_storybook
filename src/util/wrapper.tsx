@@ -2,19 +2,16 @@ import * as Preact from 'preact';
 import * as React from 'react';
 
 interface WrapperProps {
-  component: Preact.JSX.Element
+  Component: Preact.Component;
 }
 
 // renders preact component as react component
-const Wrapper = ({component}: WrapperProps): JSX.Element => {
+const Wrapper = ({Component}: WrapperProps): JSX.Element => {
   const anchorRef = React.createRef<HTMLDivElement>();
 
-  const renderPreact = () => {
-    debugger;
-    Preact.render(component, anchorRef.current);
-  }
-
-  React.useEffect(renderPreact);
+  React.useEffect(() => {
+    Preact.render(Component.render(), anchorRef.current);
+  });
 
   return(
     <div ref={anchorRef}></div>

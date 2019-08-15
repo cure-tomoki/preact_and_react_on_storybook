@@ -2,12 +2,19 @@
 import Preact, { h } from 'preact';
 
 interface PreactComponentProps {
-  type: string
+  type: string;
 }
 
-export const PreactComponent = (props: PreactComponentProps): Preact.JSX.Element => {
-  const {type} = props;
-  return (
-    <h1>{`This is a ${type} Component`}</h1>
-  );
+class Foo extends Preact.Component<{text: string}, {}> {
+  render() {
+    return <p>{this.props.text}</p>
+  }
+}
+
+export class PreactComponent extends Preact.Component <PreactComponentProps, {}>{
+  render() {
+    return (
+      <Foo text={`This is a ${this.props.type} Component`} />
+    );
+  }
 }

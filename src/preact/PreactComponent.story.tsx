@@ -7,5 +7,5 @@ import Wrapper from '../util/wrapper';
 const type = 'Preact';
 
 storiesOf(type, module).add(`${type}Component`,() => (
-  <Wrapper component={PreactComponent({type})}/>
+  <Wrapper Component={new PreactComponent({type})}/>
 ));

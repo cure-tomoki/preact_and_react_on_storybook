@@ -4,9 +4,16 @@ interface ReactComponentProps {
   type: string
 }
 
-export const ReactComponent = (props: ReactComponentProps): JSX.Element => {
-  const {type} = props;
-  return (
-    <h1>{`This is a ${type} Component`}</h1>
-  );
+class Foo extends React.Component<{text: string}, {}> {
+  render() {
+    return <p>{this.props.text}</p>
+  }
+}
+
+export class ReactComponent extends React.Component<ReactComponentProps> {
+  render() {
+    return (
+      <Foo text={`This is a ${this.props.type} Component`} />
+    );
+  }
 }
